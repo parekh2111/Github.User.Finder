@@ -4,9 +4,9 @@ import Spiner from '../layout/Spinner';
 import PropTypes from 'prop-types';
 
 
-export const Users = ({ users, loading }) => {
+const Users = ({ users, loading }) => {
 	if (loading) {
-		return <Spiner />;
+		return <Spiner/>;
 	} else {
 		return (
 			<div style={userStyle}>
@@ -16,10 +16,10 @@ export const Users = ({ users, loading }) => {
 			</div>
 		);
 	}
-}
+};
 Users.prototype = {
-	users: PropTypes.array.isRequired, 
-	loading: PropTypes.bool.isRequired, 
+	users: PropTypes.array.isRequired,
+	loading: PropTypes.bool.isRequired,
 };
 const userStyle = {
 	display: 'grid',
